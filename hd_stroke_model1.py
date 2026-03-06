@@ -7,6 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/14L1mfKCLKT-YlCJG3msqLcr69qcMcQm4
 """
 
+import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,7 +18,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Ridge
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-
+#from google.colab import files
+# ── Streamlit file upload (replaces google.colab) ──
+st.subheader("Upload your heart disease dataset (CSV)")
+uploaded_file = st.file_uploader(
 uploaded = files.upload()
 
 heart = pd.read_csv("heart_disease_dataset.csv")
@@ -105,7 +109,10 @@ prediction = round(prediction[0])
 
 print("Prediction:", prediction)
 
-
+#from google.colab import files
+# ── Streamlit file upload (replaces google.colab) ──
+st.subheader("Upload your heart disease dataset (CSV)")
+uploaded_file = st.file_uploader(
 uploaded = files.upload()
 
 stroke = pd.read_csv("healthcare-dataset-stroke-data.csv")
