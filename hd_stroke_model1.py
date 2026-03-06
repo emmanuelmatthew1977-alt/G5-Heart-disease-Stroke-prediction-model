@@ -17,7 +17,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Ridge
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-from google.Drive import files
+
 uploaded = files.upload()
 
 heart = pd.read_csv("heart_disease_dataset.csv")
@@ -105,7 +105,7 @@ prediction = round(prediction[0])
 
 print("Prediction:", prediction)
 
-from google.colab import files
+
 uploaded = files.upload()
 
 stroke = pd.read_csv("healthcare-dataset-stroke-data.csv")
