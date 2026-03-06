@@ -21,7 +21,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 #from google.colab import files
 # ── Streamlit file upload (replaces google.colab) ──
 st.subheader("Upload your heart disease dataset (CSV)")
-uploaded_file = st.file_uploader(
+uploaded_file = st.file_uploader()
 uploaded = files.upload()
 
 heart = pd.read_csv("heart_disease_dataset.csv")
@@ -112,7 +112,7 @@ print("Prediction:", prediction)
 #from google.colab import files
 # ── Streamlit file upload (replaces google.colab) ──
 st.subheader("Upload your heart disease dataset (CSV)")
-uploaded_file = st.file_uploader(
+uploaded_file = st.file_uploader()
 uploaded = files.upload()
 
 stroke = pd.read_csv("healthcare-dataset-stroke-data.csv")
